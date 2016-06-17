@@ -6,5 +6,10 @@
     "NamedFunction": "aleclarson/NamedFunction#1.0.0",
     "log": "aleclarson/log#1.0.0",
     "setType": "aleclarson/setType#1.0.0"
+  },
+  "lotus": {
+    "plugins": [
+      "lotus-coffee"
+    ]
   }
 }

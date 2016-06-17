@@ -6,14 +6,17 @@ log = require "log"
 module.exports =
 TimeMarker = NamedFunction "TimeMarker", ->
 
-  self = (eventName) ->
+  time = Date.now()
+
+  self = (description) ->
     now = Date.now()
-    log.it eventName + ": " + (now - @_time)
-    @_time = now
+    log.moat 0
+    log.yellow description, ": "
+    log.yellow.dim now - time
+    log.moat 0
+    time = now
     return
 
-  Object.defineProperty self, "_time",
-    value: Date.now()
-    writable: yes
+  Object.defineProperty self, "time", get: -> time
 
   return setType self, TimeMarker
