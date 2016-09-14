@@ -1,15 +1,21 @@
 {
   "name": "TimeMarker",
   "version": "1.0.0",
-  "main": "js/src/TimeMarker",
+  "main": "js/TimeMarker",
+  "plugins": [
+    "lotus-coffee"
+  ],
+  "scripts": {
+    "build": "coffee -cb -o js src",
+    "postinstall": "postinstall-build js 'npm run build'"
+  },
   "dependencies": {
     "NamedFunction": "aleclarson/NamedFunction#1.0.0",
-    "log": "aleclarson/log#1.0.0",
+    "log": "aleclarson/log#2.0.0",
+    "postinstall-build": "0.2.x",
     "setType": "aleclarson/setType#1.0.0"
   },
-  "lotus": {
-    "plugins": [
-      "lotus-coffee"
-    ]
+  "devDependencies": {
+    "coffee-script": "1.9.x"
   }
 }
