@@ -10,7 +10,7 @@
     "postinstall": "postinstall-build js 'npm run build'"
   },
   "dependencies": {
-    "NamedFunction": "aleclarson/NamedFunction#1.0.0",
+    "NamedFunction": "aleclarson/NamedFunction#2.0.1",
     "log": "aleclarson/log#2.0.0",
     "postinstall-build": "0.2.x",
     "setType": "aleclarson/setType#1.0.0"
